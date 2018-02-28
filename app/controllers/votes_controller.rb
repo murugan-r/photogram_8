@@ -47,8 +47,6 @@ class VotesController < ApplicationController
 
   def update
     @vote = Vote.find(params[:id])
-
-    @vote.user_id = params[:user_id]
     @vote.photo_id = params[:photo_id]
 
     save_status = @vote.save
